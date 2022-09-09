@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>paymnent processsing</title> 
+    <link rel="stylesheet" href="card2.css">
+</head>
+
+<body>
+    <div class="main-box">
+    <div class="heading">
+        <h1> Pay Invoice </h1> 
+    </div>
+   <div class="box">
+    <p> Payment Amount</p>
+    <p>$ 500</p>
+    <p> Name on Card </p>
+    <input id="name" type="text"/>
+    <p>Card Number</p>"
+    <input type="number" id="card"/>
+    <p> Expiry code Security code  </p>
+    <input type="text" id="cvv"/>
+    <p>Expiry Date</p>
+    <input type="date" id="date"/>
+   </div>
+    <div class="pay">
+        <button onclick="checkValid()" type="Submit" name="">Pay $ 500</button>    
+    </div>
+</div>
+</body>
+</html>
+
+<script>
+    let name = document.querySelector("#name");
+    let card = document.querySelector("#card");
+    let cvv = document.querySelector("#cvv");
+    let date = document.querySelector("#date");
+
+function checkValid(){
+    if(name.value.length < 5){
+        alert("Name should be more then 5 in length");
+        return
+    }
+    if(card.value.length != 14){
+       console.log(card.value, typeof card.value)
+        alert("Card is invalid")
+        return
+    }
+    if(cvv.value.length != 3) {
+        alert("CVV is invalid")
+        return
+    }
+    let today = new Date()
+    if(today > new Date(date.value)) {
+        alert("Card is expired")
+        return
+    }
+
+    document.location.href = "otp.html"
+}
+
+
+</script>

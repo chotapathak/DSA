@@ -1,0 +1,51 @@
+body{
+    box-sizing: border-box;
+}
+.main-box{
+    display: grid;
+    width: 100%;
+    height: auto;
+    justify-items: center;
+}
+.box-content{
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    height: auto;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;     */
+    padding: 20px;
+    margin: 10px 100px;
+    box-shadow: 2px 0px 10px rgb(0 0 0 / 10%);
+    border-radius: 10px;
+}
+input{
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-weight: transparent;
+    margin: 10px 0;
+}
+.username{
+    font-size: 20px;
+    opacity: 0.3;
+    font-weight: bold;
+}
+.email{
+    font-size: 20px;
+    opacity: 0.3;
+    font-weight: bold;
+}
+.psswrd{
+    font-size: 20px;
+    opacity: 0.3;
+    font-weight: bold;
+}
+.signup{
+    font-size: 20px;
+    font-weight: bold;
+}
